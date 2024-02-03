@@ -7,7 +7,6 @@ def add_task():
 
     if add_task_input == 'yes':
         task = input("Enter the task: ")
-        completion_status = input("Enter the completion status: ")
 
         # Generate a unique ID for the task
         task_id = str(uuid.uuid4())
@@ -15,7 +14,7 @@ def add_task():
         task_data = {
             'id': task_id,
             'task': task,
-            'completionStatus': completion_status
+            'completionStatus': ""
         }
 
         send_task_to_azure_function(task_data)
