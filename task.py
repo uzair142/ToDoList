@@ -14,7 +14,7 @@ def add_task():
         task_data = {
             'id': task_id,
             'task': task,
-            'completionStatus': ""
+            'completionStatus': "a"
         }
 
         send_task_to_azure_function(task_data)
